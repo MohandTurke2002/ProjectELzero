@@ -1,5 +1,99 @@
+@use "../Variabls/variabls" as *;
+
 body {
   padding: 0;
   margin: 0;
   font-family: 'Cairo', sans-serif !important;
+}
+
+.special-title {
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    transition: $transision;
+  }
+  padding: 10px 20px;
+  border: 2px solid black;
+  width: fit-content;
+  font-size: 30px;
+  margin: 0 auto 80px;
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: $transision;
+  &::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    transition: $transision;
+  }
+  &:hover {
+    &::before {
+      animation-name: moveright;
+      animation-timing-function: linear;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    animation-name: title;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    &::after {
+      animation-name: moveleft;
+      animation-timing-function: linear;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes moveright {
+  0% {left: -30px;}
+  50% {left: 0px;}
+  100% {
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+    left: 0px;
+  }
+}
+@keyframes title {
+  0% {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+  }
+  100% {
+    color: white;
+    border: 2px solid $main-color;
+  }
+}
+@keyframes moveleft {
+  0% {right: -30px;}
+  50% {right: 0px;}
+  100% {
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+    right: 0px;
+  }
 }
