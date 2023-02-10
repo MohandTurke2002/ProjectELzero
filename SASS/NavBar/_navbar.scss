@@ -1,5 +1,6 @@
 @use  "../Variabls/variabls" as *;
 .navbarr {
+  background-color: white;
   .dropdown-menu {
     width: 95vw;
     position: absolute;
@@ -60,7 +61,7 @@
     }
   }
   .show {
-    top: 72px;
+    top: 73px;
     opacity: 1;
   }
 }
@@ -117,6 +118,7 @@
       color: black;
     }
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -159,6 +161,8 @@
       height: fit-content;
       flex-basis: 1;
       flex-grow: 1;
+      max-height: 45%;
+      overflow: hidden;
       .navbar-nav {
         flex-direction: row;
         justify-content: center;
@@ -176,6 +180,9 @@
     padding: 0 15px !important;
     width: 100% !important;
     left: 0px !important;
+    .special {
+      border-top: 1px solid #e9e6e6;
+    }
     ul {
       padding: 0 !important;
     }
@@ -184,7 +191,7 @@
     }
   }
   .show {
-    top: 80px !important;
+    top: 73px !important;
   }
 }
 
