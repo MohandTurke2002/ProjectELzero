@@ -25,7 +25,6 @@
       .image {
         overflow: hidden;
         img {
-          max-width: 100%;
           transition: $transision;
           &:hover {
             transform: rotate(5deg) scale(1.1);

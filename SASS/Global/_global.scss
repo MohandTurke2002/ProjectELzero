@@ -4,6 +4,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Cairo', sans-serif !important;
+  img {
+    max-width: 100%;
+  }
 }
 
 .special-title {
@@ -68,7 +71,7 @@ body {
   0% {left: -30px;}
   50% {left: 0px;}
   100% {
-    width: 50%;
+    width: 51%;
     height: 100%;
     border-radius: 0;
     z-index: -1;

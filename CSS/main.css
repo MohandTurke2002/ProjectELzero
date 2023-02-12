@@ -3,6 +3,9 @@ body {
   margin: 0;
   font-family: "Cairo", sans-serif !important;
 }
+body img {
+  max-width: 100%;
+}
 
 .special-title {
   padding: 10px 20px;
@@ -93,7 +96,7 @@ body {
     left: 0px;
   }
   100% {
-    width: 50%;
+    width: 51%;
     height: 100%;
     border-radius: 0;
     z-index: -1;
@@ -109,7 +112,7 @@ body {
     left: 0px;
   }
   100% {
-    width: 50%;
+    width: 51%;
     height: 100%;
     border-radius: 0;
     z-index: -1;
@@ -189,9 +192,6 @@ body {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-}
-.navbarr .dropdown-menu .row .image img {
-  max-width: 100%;
 }
 .navbarr .dropdown-menu .row ul {
   list-style: none;
@@ -443,7 +443,6 @@ body {
   color: #666;
 }
 .land .image img {
-  max-width: 100%;
   position: relative;
   -webkit-animation-name: updown;
           animation-name: updown;
@@ -647,7 +646,6 @@ body {
           animation-iteration-count: infinite;
 }
 .articles .content .card img {
-  max-width: 100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -740,7 +738,6 @@ body {
   overflow: hidden;
 }
 .gallery .content .box .image img {
-  max-width: 100%;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
@@ -792,5 +789,246 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+.featuers {
+  padding: 100px 0;
+}
+.featuers .content {
+  padding: 0 20px;
+}
+.featuers .content .box1, .featuers .content .box2, .featuers .content .box3 {
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.featuers .content .box1 .text h2, .featuers .content .box2 .text h2, .featuers .content .box3 .text h2 {
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+}
+.featuers .content .box1 .text p, .featuers .content .box2 .text p, .featuers .content .box3 .text p {
+  padding: 25px;
+  text-align: center;
+  margin: 30px 0;
+  color: #777;
+  font-size: 20px;
+  line-height: 2;
+}
+.featuers .content .box1 .image::before {
+  background-color: #f44036;
+}
+.featuers .content .box2 .image::before {
+  background-color: #009688;
+}
+.featuers .content .box3 .image::before {
+  background-color: #03a9f4;
+}
+.featuers .content .box1 .image, .featuers .content .box2 .image, .featuers .content .box3 .image {
+  position: relative;
+  overflow-x: clip;
+}
+.featuers .content .box1 .image::before, .featuers .content .box2 .image::before, .featuers .content .box3 .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
+.featuers .content .box1 .image::after, .featuers .content .box2 .image::after, .featuers .content .box3 .image::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.featuers .content .box1 h2::after, .featuers .content .box2 h2::after, .featuers .content .box3 h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 5px;
+}
+.featuers .content .box1 h2::after {
+  background-color: #f44036;
+  width: 25%;
+}
+.featuers .content .box1 .image {
+  position: relative;
+}
+.featuers .content .box1 button {
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 auto 30px;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  border: 3px solid #f44036;
+  background-color: transparent;
+  color: #f44036;
+  position: relative;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.featuers .content .box1 button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f44036;
+}
+.featuers .content .box1:hover button::before {
+  -webkit-animation-name: button;
+          animation-name: button;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: -1;
+}
+.featuers .content .box1:hover button {
+  color: white;
+}
+.featuers .content .box1:hover .image::after {
+  border-width: 170px 500px 170px 0px;
+  border-color: transparent transparent white transparent;
+}
+.featuers .content .box2 h2::after {
+  background-color: #009688;
+  width: 17%;
+}
+.featuers .content .box2 .image {
+  position: relative;
+}
+.featuers .content .box2 button {
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 auto 30px;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  border: 3px solid #009688;
+  background-color: transparent;
+  color: #009688;
+  position: relative;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.featuers .content .box2 button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #009688;
+}
+.featuers .content .box2:hover button::before {
+  -webkit-animation-name: button;
+          animation-name: button;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: -1;
+}
+.featuers .content .box2:hover button {
+  color: white;
+}
+.featuers .content .box2:hover .image::after {
+  border-width: 170px 500px 170px 0px;
+  border-color: transparent transparent white transparent;
+}
+.featuers .content .box3 h2::after {
+  background-color: #03a9f4;
+  width: 30%;
+}
+.featuers .content .box3 .image {
+  position: relative;
+}
+.featuers .content .box3 button {
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 auto 30px;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  border: 3px solid #03a9f4;
+  background-color: transparent;
+  color: #03a9f4;
+  position: relative;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  z-index: -1;
+}
+.featuers .content .box3 button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #03a9f4;
+}
+.featuers .content .box3:hover button::before {
+  -webkit-animation-name: button;
+          animation-name: button;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: -1;
+}
+.featuers .content .box3:hover button {
+  color: white;
+}
+.featuers .content .box3:hover .image::after {
+  border-width: 170px 500px 170px 0px;
+  border-color: transparent transparent white transparent;
+}
+
+@-webkit-keyframes button {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes button {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
