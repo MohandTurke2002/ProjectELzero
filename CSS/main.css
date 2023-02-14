@@ -1032,3 +1032,46 @@ body img {
     width: 100%;
   }
 }
+.testimonials {
+  background-color: #ececec;
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+.testimonials .cont {
+  padding: 20px;
+}
+.testimonials .cont .box {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+}
+.testimonials .cont .box .avatar {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+}
+.testimonials .cont .box .avatar img {
+  border-radius: 50%;
+  width: 100px;
+  border: 10px solid #ececec;
+}
+.testimonials .cont .box .disc h5 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+.testimonials .cont .box .disc p {
+  color: #777;
+  margin-bottom: 10px;
+}
+.testimonials .cont .box .disc .fill {
+  color: #ffc107;
+}
+.testimonials .cont .box .disc p:last-of-type {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #777;
+}

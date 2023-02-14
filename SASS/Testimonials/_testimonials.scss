@@ -1,0 +1,47 @@
+@use "../Variabls/variabls" as *;
+
+.testimonials {
+  background-color: $back-color;
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+  .cont {
+    padding: 20px;
+    .box {
+      background-color: white;
+      border-radius: 6px;
+      padding: 20px;
+      position: relative;
+      .avatar {
+        position: absolute;
+        top: -50px;
+        right: -10px;
+        img {
+          border-radius: 50%;
+          width: 100px;
+          border: 10px solid $back-color;
+        }
+      }
+      .disc {
+        h5 {
+          font-size: 19px;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: black;
+        }
+        p {
+          color: #777;
+          margin-bottom: 10px;
+        }
+        .fill {
+          color: #ffc107;
+        }
+        p:last-of-type {
+          margin-top: 10px;
+          margin-bottom: 0;
+          color: #777;
+        }
+      }
+    }
+  }
+}
