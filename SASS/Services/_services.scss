@@ -1,0 +1,100 @@
+@use "../Variabls/variabls" as *;
+
+.services {
+  background-color: $back-color;
+  position: relative;
+  z-index: 6;
+  padding: 100px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%),
+      linear-gradient(-135deg, white 25%, transparent 25%);
+    background-size: 30px;
+  }
+  .cont {
+    padding: 20px;
+    .box {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        top: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #2196f3;
+        transition: 0.3s linear;
+      }
+      background-color: white;
+      position: relative;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      transition: 0.3s linear;
+      top: 0;
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+        top: -10px;
+        transition: 0.3s linear;
+      }
+      .face {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        svg {
+          margin: 30px auto 20px;
+          font-size: 64px;
+          color: #d5d5d5;
+          width: 100%;
+        }
+        h5 {
+          font-size: 25px;
+          font-weight: 700;
+          color: #2196f3;
+          margin: 0 0 40px;
+        }
+      }
+      .after {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f9f9f9;
+        align-items: center;
+        .number {
+          width: 95px;
+          background-color: #2196f3;
+          padding: 0px 20px;
+          font-size: 30px;
+          font-weight: 900;
+          color: white;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #d5d5d5;
+            right: -30px;
+            top: 0;
+            transform: skewX(-35deg);
+          }
+          p {
+            margin: 0;
+          }
+        }
+        .detail {
+          padding: 0 15px;
+          a {
+            text-decoration: none;
+            color: #2196f3;
+          }
+        }
+      }
+    }
+  }
+}

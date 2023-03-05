@@ -1,0 +1,117 @@
+.skills {
+  padding: 100px 0;
+  .cont {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .con {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      h5 {
+        margin: 18px 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      span {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 1px 5px;
+        font-weight: 900;
+        color: #2196f3;
+      }
+      .div {
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background-color: #2196f3;
+          left: 0;
+          top: 0;
+        }
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .skills {
+    .img {
+      display: none;
+    }
+  }
+}
+
+.animate {
+  &.ht::before {
+    width: 0;
+    animation-name: ht;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  &.cs::before {
+    width: 0;
+    animation-name: cs;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  &.js::before {
+    width: 0;
+    animation-name: js;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  &.py::before {
+    width: 0;
+    animation-name: py;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  @keyframes ht {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes cs {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+  @keyframes js {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes py {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+}

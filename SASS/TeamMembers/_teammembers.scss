@@ -1,0 +1,104 @@
+@use "../Variabls/variabls" as *;
+
+.teammembers {
+  padding: 100px 0;
+  .cont {
+    padding: 15px;
+    .box {
+      position: relative;
+      padding: 60px 0 0 0;
+      &:hover {
+        img {
+          filter: grayscale(100%);
+        }
+        &::after {
+          width: 82%;
+        }
+        h5 {
+          color: #777 !important;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 82%;
+        height: 100%;
+        background-color: #f3f3f3;
+        top: 0;
+        right: 0;
+        z-index: -3;
+        border-radius: 10px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background-color: #e4e4e4;
+        top: 0;
+        right: 0;
+        z-index: -2;
+        border-radius: 10px;
+        transition: 0.3s linear;
+      }
+      .imgicon {
+        display: flex;
+        .image {
+          width: 85%;
+          img {
+            max-width: 100%;
+            border-radius: 6px;
+            transition: 0.3s linear;
+          }
+        }
+        .icons {
+          display: flex;
+          flex-direction: column;
+          width: 15%;
+          justify-content: center;
+          svg {
+            margin: 15px 0;
+            color: #777;
+            cursor: pointer;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+      .disc {
+        padding-left: 80px;
+        h5 {
+          margin-top: 22px;
+          font-weight: 700;
+          font-size: 22px;
+          margin-bottom: 0;
+          color: $main-color;
+        }
+        p {
+          margin-top: 10px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .teammembers {
+    .box {
+      padding: 60px 0 1px 0 !important;
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .teammembers {
+    .disc {
+      padding-left: 120px !important;
+    }
+    .box {
+      padding: 60px 0 1px 0 !important;
+    }
+  }
+}

@@ -1,10 +1,11 @@
-@use  "../Variabls/variabls" as *;
+@use "../Variabls/variabls" as *;
 .navbarr {
   background-color: white;
   .dropdown-menu {
     width: 95vw;
     position: absolute;
-    left: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 100px;
     opacity: 0;
     transition: $transision;
@@ -13,6 +14,7 @@
     border-radius: 0;
     border: none;
     border-bottom: 3px solid $main-color;
+    z-index: -1;
     .row {
       column-gap: 30px;
       ul {
@@ -44,6 +46,9 @@
             color: $main-color;
             font-weight: bold;
             padding: 0;
+            &:focus {
+              background-color: transparent;
+            }
             svg {
               margin-right: 15px;
             }
@@ -58,6 +63,7 @@
   .show {
     top: 73px;
     opacity: 1;
+    z-index: 999 !important;
   }
 }
 .navbar {
@@ -70,11 +76,11 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 ;
-    margin: 0 ;
-    font-size: 26px ;
-    font-weight: 700 ;
-    color: $main-color ;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: $main-color;
   }
   .collapse {
     justify-content: end;
@@ -113,7 +119,6 @@
       color: black;
     }
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -174,7 +179,6 @@
   .dropdown-menu {
     padding: 0 15px !important;
     width: 100% !important;
-    left: 0px !important;
     .special {
       border-top: 1px solid #e9e6e6;
     }
@@ -187,6 +191,6 @@
   }
   .show {
     top: 73px !important;
+    z-index: 999 !important;
   }
 }
-
