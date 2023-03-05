@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     padding: 100px 0;
-    background-image: url("../../Images/Request/discount-background1.jpg");
+    background-image: url("../Images/Request/discount-background1.jpg");
     background-size: cover;
     position: relative;
     animation-name: change-backgr;
@@ -101,13 +101,13 @@
 
 @keyframes change-backgr {
   0% {
-    background-image: url("../../Images/Request/discount-background1.jpg");
+    background-image: url("../Images/Request/discount-background1.jpg");
   }
   50% {
-    background-image: url("../../Images/Request/discount-background2.jpg");
+    background-image: url("../Images/Request/discount-background2.jpg");
   }
   100% {
-    background-image: url("../../Images/Request/discount-background1.jpg");
+    background-image: url("../Images/Request/discount-background1.jpg");
   }
 }
 
