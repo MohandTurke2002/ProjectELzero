@@ -20,6 +20,7 @@ body img {
   text-transform: uppercase;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  z-index: 9999;
 }
 .special-title::before {
   content: "";
@@ -1779,6 +1780,12 @@ body img {
   background-color: white;
   color: #2196f3;
   border: 2px solid #2196f3;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.plans .price .cont .button input:hover {
+  color: white !important;
+  background-color: #2196f3 !important;
 }
 .plans .price .cont::before {
   content: "";

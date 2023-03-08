@@ -30,6 +30,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   transition: $transision;
+  z-index: 9999;
   &::after {
     content: "";
     width: 12px;
